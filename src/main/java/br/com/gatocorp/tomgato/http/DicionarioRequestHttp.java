@@ -9,14 +9,11 @@ import java.time.Duration;
 
 public class DicionarioRequestHttp {
 
-	public static final String URL_GET = "http://localhost:8080/";
+	public static final String URL_GET = "http://127.0.0.1:8080/";
 	
 	
 	public String acessoGET(Long indice) {
 	
-		HttpClient client = HttpClient.newHttpClient();
-		
-		
 		HttpRequest request = HttpRequest.newBuilder()
 		          .GET()
 		          .timeout(Duration.ofSeconds(10))
@@ -28,7 +25,9 @@ public class DicionarioRequestHttp {
 		
 		try {
 			
-			response = client.send(request,HttpResponse.BodyHandlers.ofString());
+			response = HttpClient.newBuilder()
+					  .build()
+					  .send(request, HttpResponse.BodyHandlers.ofString());
 			
 			return response.body();
 			
