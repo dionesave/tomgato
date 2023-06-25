@@ -1,0 +1,10 @@
+spring:
+  thymeleaf:
+    mode: HTML
+    cache: FALSE
+server:
+  port: 8081
+  error:
+    whitelabel:
+      enabled: false
+    

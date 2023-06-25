@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dicionário</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<style>
+	h1{
+		text-align: center;
+	}
+	
+	fieldset {
+		width: 526.8px;
+		text-align: center;
+		margin-left: 480px;
+		font-size: larger;
+	}
+	
+</style>
+<body>
+    <h1>Dicionário</h1>
+    <form action="/buscar-palavra" method="post">
+        <fieldset>
+    		<label for="nome" style="font-size: larger;">Palavra:</label>
+	     	<input type="text" id="palavra" name="palavra" placeholder="Digite sua palavra aqui" required style="font-size: larger;">
+	     	<input type="submit" value="Buscar" style="font-size: larger;">
+	    </fieldset>
+    </form>
+</body>
+</html>
